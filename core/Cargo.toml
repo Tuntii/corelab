@@ -1,0 +1,23 @@
+[package]
+name = "corelab"
+version = "0.1.0"
+edition = "2021"
+description = "CoreLab - Local-first, AI-powered personal applications framework"
+authors = ["Tunay"]
+
+[dependencies]
+tauri = { version = "2", features = [] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+rusqlite = { version = "0.32", features = ["bundled"] }
+tokio = { version = "1", features = ["full"] }
+thiserror = "2"
+chrono = { version = "0.4", features = ["serde"] }
+async-trait = "0.1"
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
+
+[lib]
+name = "corelab_lib"
+crate-type = ["staticlib", "cdylib", "rlib"]

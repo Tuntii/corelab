@@ -1,0 +1,331 @@
+.memory-app {
+    display: flex;
+    height: 100%;
+    gap: var(--space-lg);
+}
+
+.memory-sidebar {
+    width: 300px;
+    flex-shrink: 0;
+}
+
+.memory-main {
+    flex: 1;
+    min-width: 0;
+}
+
+.memory-empty {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    color: var(--color-text-muted);
+}
+
+.empty-icon {
+    font-size: 48px;
+    margin-bottom: var(--space-md);
+    opacity: 0.5;
+}
+
+/* Person List */
+.person-list {
+    background: var(--color-bg-secondary);
+    border-radius: var(--radius-lg);
+    padding: var(--space-md);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.person-list-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--space-md);
+}
+
+.person-list-header h2 {
+    font-size: var(--font-size-lg);
+}
+
+.person-list-header .count {
+    background: var(--color-accent-muted);
+    color: var(--color-accent);
+    padding: var(--space-xs) var(--space-sm);
+    border-radius: var(--radius-sm);
+    font-size: var(--font-size-xs);
+}
+
+.person-add {
+    display: flex;
+    gap: var(--space-sm);
+    margin-bottom: var(--space-md);
+}
+
+.person-add input {
+    flex: 1;
+}
+
+.add-btn {
+    width: 40px;
+    height: 40px;
+    background: var(--color-accent);
+    color: white;
+    border-radius: var(--radius-md);
+    font-size: var(--font-size-lg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+}
+
+.add-btn:hover:not(:disabled) {
+    background: var(--color-accent-hover);
+}
+
+.add-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.person-list-items {
+    flex: 1;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xs);
+}
+
+.person-item {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+    padding: var(--space-md);
+    border-radius: var(--radius-md);
+    text-align: left;
+    transition: background 0.2s;
+}
+
+.person-item:hover {
+    background: var(--color-bg-tertiary);
+}
+
+.person-item.active {
+    background: var(--color-accent-muted);
+}
+
+.person-avatar {
+    width: 40px;
+    height: 40px;
+    background: var(--color-accent);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    flex-shrink: 0;
+}
+
+.person-info {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.person-name {
+    font-weight: 500;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.person-date {
+    font-size: var(--font-size-xs);
+    color: var(--color-text-muted);
+}
+
+/* Person Detail */
+.person-detail {
+    background: var(--color-bg-secondary);
+    border-radius: var(--radius-lg);
+    padding: var(--space-lg);
+    height: 100%;
+    overflow-y: auto;
+}
+
+.detail-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: var(--space-xl);
+    padding-bottom: var(--space-lg);
+    border-bottom: 1px solid var(--color-border);
+}
+
+.detail-info h1 {
+    font-size: var(--font-size-xl);
+    margin-bottom: var(--space-sm);
+}
+
+.detail-info .notes {
+    color: var(--color-text-secondary);
+}
+
+.detail-actions {
+    display: flex;
+    gap: var(--space-sm);
+}
+
+.btn-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+}
+
+.btn-icon:hover {
+    background: var(--color-bg-tertiary);
+}
+
+.btn-icon.danger:hover {
+    background: rgba(239, 68, 68, 0.2);
+}
+
+.edit-form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+    width: 100%;
+}
+
+.edit-form input {
+    font-size: var(--font-size-lg);
+    font-weight: 600;
+}
+
+.edit-form textarea {
+    min-height: 80px;
+    resize: vertical;
+}
+
+.edit-actions {
+    display: flex;
+    gap: var(--space-sm);
+}
+
+.btn-primary {
+    background: var(--color-accent);
+    color: white;
+    padding: var(--space-sm) var(--space-md);
+    border-radius: var(--radius-md);
+    font-weight: 500;
+}
+
+.btn-primary:hover {
+    background: var(--color-accent-hover);
+}
+
+.btn-secondary {
+    background: var(--color-bg-tertiary);
+    padding: var(--space-sm) var(--space-md);
+    border-radius: var(--radius-md);
+}
+
+.btn-secondary:hover {
+    background: var(--color-border);
+}
+
+.detail-section {
+    margin-bottom: var(--space-xl);
+}
+
+.detail-section h2 {
+    font-size: var(--font-size-md);
+    margin-bottom: var(--space-md);
+    color: var(--color-text-secondary);
+}
+
+.note-input {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+    margin-bottom: var(--space-lg);
+}
+
+.note-input textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.note-input button {
+    align-self: flex-end;
+    background: var(--color-accent);
+    color: white;
+    padding: var(--space-sm) var(--space-lg);
+    border-radius: var(--radius-md);
+    font-weight: 500;
+}
+
+.note-input button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.conversation-list,
+.memory-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+}
+
+.conversation-item,
+.memory-item {
+    background: var(--color-bg-tertiary);
+    padding: var(--space-md);
+    border-radius: var(--radius-md);
+}
+
+.conversation-item .date {
+    display: block;
+    margin-top: var(--space-sm);
+    font-size: var(--font-size-xs);
+    color: var(--color-text-muted);
+}
+
+.memory-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--space-sm);
+}
+
+.memory-key {
+    font-weight: 600;
+    color: var(--color-accent);
+}
+
+.importance {
+    color: var(--color-warning);
+}
+
+.empty,
+.loading {
+    color: var(--color-text-muted);
+    text-align: center;
+    padding: var(--space-lg);
+}
+
+.error-state {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-md);
+    height: 100%;
+}
