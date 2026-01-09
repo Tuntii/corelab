@@ -86,6 +86,10 @@
   - Personal Memory App UI (MemoryApp, PersonList, PersonDetail)
   - Kişi CRUD ve Görüşme Kaydı hazır
 - ⏳ AI provider entegrasyonu bekliyor
+- ✅ **Doğrulama Başarılı:**
+  - Build & Run: Başarılı (`npm run tauri dev`)
+  - Database: `corelab.db` oluşturuldu ve migrations uygulandı.
+  - UI: Tarayıcı ve Electron(Tauri) içinde çalıştı.
 
 ---
 
